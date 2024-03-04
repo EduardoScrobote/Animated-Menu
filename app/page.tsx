@@ -20,7 +20,7 @@ export default function Home() {
       animate={isOpen ? "open" : "closed"}
       className="w-full h-screen flex flex-col justify-center text-white bg-black items-center "
     >
-      <h1 className="mb-32 text-[52px]">Animated Menu</h1>
+      <h1 className="mb-32 text-[52px] font-bold">Animated Menu</h1>
       <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -95,7 +95,14 @@ export default function Home() {
           Item 5{" "}
         </motion.li>
       </motion.ul>
-      <h1 className="mt-32 text-[52px]">Repository</h1>
+      <h1
+        className="mt-32 text-[52px] hover:text-[#7b0460] hover:cursor-pointer"
+        onClick={() =>
+          window.open("https://github.com/EduardoScrobote/Animated-Menu")
+        }
+      >
+        Repository
+      </h1>
     </motion.nav>
   );
 }
